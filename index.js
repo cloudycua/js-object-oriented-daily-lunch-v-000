@@ -76,6 +76,7 @@ class Meal {
     const allCustomers = this.deliveries().map(delivery => delivery.customer());
     return [...new Set(allCustomers)];
   }
+  // a class method that orders all meals instances by their price in descending order
   static byPrice() {
     return store.meals.sort((a,b) => b.price - a.price);
   }
