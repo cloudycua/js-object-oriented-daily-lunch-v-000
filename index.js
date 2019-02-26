@@ -53,6 +53,7 @@ class Customer {
   meals() {
     return this.deliveries().map(delivery => delivery.meal());
   }
+  // returns the total amount that the customer has spent on food
   totalSpent() {
     return this.meals().reduce((total, meal) => (total += meal.price), 0);
   }
